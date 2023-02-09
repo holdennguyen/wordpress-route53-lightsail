@@ -1,0 +1,1 @@
+# wordpress-route53-lightsail
