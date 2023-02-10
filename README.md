@@ -17,24 +17,24 @@
 
 <ol>
     <li>Navigate to the <b>Lightsail</b> console from <a href="https://console.aws.amazon.com/" target="_blank">AWS Management Console</a>.<br><br>
-    <a href=""><img src="./assets/aws-management-console.png"></a><br><br><br>
+    <picture><img src="./assets/aws-management-console.png"></picture><br><br><br>
     </li>
     <li>Select <b>Create instance</b>.<br><br>
-    <a href=""><img src="./assets/create-instance.png"></a><br><br><br>
+    <picture><img src="./assets/create-instance.png"></picture><br><br><br>
     </li>
     <li>Select <b>Change AWS Region and Availability Zone</b> to choose the most suitable for your location.<br>
-    <a href=""><img src="./assets/instance-location.png"></a><br><br>
+    <picture><img src="./assets/instance-location.png"></picture><br><br>
     Region <b>Singapore</b> is fastest location for Vietnam. You can choose any Availability Zone.<br><br>
-    <a href=""><img src="./assets/select-location.png"></a><br><br>
+    <picture><img src="./assets/select-location.png"></picture><br><br>
     </li>
     <li>Select platform <b>Linux/Unix</b> and blueprint <b>WordPress (Apps + OS)</b>.<br><br>
-    <a href=""><img src="./assets/instance-image.png"></a><br><br><br>
+    <picture><img src="./assets/instance-image.png"></picture><br><br><br>
     </li>
     <li>Select <b>Price Plan</b> base on your need.<br><br>
-    <a href=""><img src="./assets/instance-plan.png"></a><br><br><br>
+    <picture><img src="./assets/instance-plan.png"></picture><br><br><br>
     </li>
     <li>Before creating the instane, give the instance a name to identify it. Then select <b>Create instance</b>.<br><br>
-    <a href=""><img src="./assets/confirm-create.png"></a><br><br><br>
+    <picture><img src="./assets/confirm-create.png"></picture><br><br><br>
     </li>
 </ol>
 That's it!
