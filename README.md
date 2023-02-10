@@ -17,10 +17,10 @@
 
 <ol>
     <li>Navigate to the <b>Lightsail</b> console from <a href="https://console.aws.amazon.com/">AWS Management Console</a>.<br><br>
-    <a href="#get-started"><img src="./assets/aws-management-console.png"></a><br><br><br>
+    <img src="./assets/aws-management-console.png"><br><br><br>
     </li>
     <li>Select <b>Create instance</b>.<br><br>
-    <a><img src="./assets/create-instance.png"></a><br><br><br>
+    <img src="./assets/create-instance.png"><br><br><br>
     </li>
     <li>Select <b>Change AWS Region and Availability Zone</b> to choose the most suitable for your location.<br>
     <a><img src="./assets/instance-location.png"></a><br><br>
