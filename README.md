@@ -10,41 +10,78 @@
 
 <br>
 <p align="center">
-<a href="#hosting-wordpress-in-the-amazon-lightsail">Hosting Wordpress in the Amazon Lightsail</a> | <a href="#config-static-ip">Config static IP</a> | <a href="#usage-examples">Usage Examples</a> | <a href="#how-does-it-work">How does it work?</a> | <a href="#features">Features</a> | <a href="#appendix-boptional-request--response-headers">Optional Headers</a> | <a href="#appendix-acommand-line-options">CLI</a> | <a href="Cheatsheet.md">Cheatsheet</a>
+<a href="#hosting-wordpress-in-the-amazon-lightsail">Hosting Wordpress in the Amazon Lightsail</a> | <a href="#config-static-ip">Config static IP</a> | <a href="#register-domain-in-amazon-route-53">Register Domain in Amazon Route 53</a> | <a href="#mapping-domain-to-ip-address">Mapping domain to IP address</a> | <a href="#features">Features</a> | <a href="#appendix-boptional-request--response-headers">Optional Headers</a> | <a href="#appendix-acommand-line-options">CLI</a> | <a href="Cheatsheet.md">Cheatsheet</a>
 </p>
 
 <h2>Hosting Wordpress in the Amazon Lightsail</h2>
 
-<ol>
-    <li>Navigate to the <b>Lightsail</b> console from <a href="https://console.aws.amazon.com/" target="_blank">AWS Management Console</a>.<br><br>
-    <picture><img width="500rem" src="./assets/aws-management-console.png"></picture><br><br><br>
-    </li>
-    <li>Select <b>Create instance</b>.<br><br>
-    <picture><img width="500rem" src="./assets/create-instance.png"></picture><br><br><br>
-    </li>
-    <li>Select <b>Change AWS Region and Availability Zone</b> to choose the most suitable for your location.<br>
+Navigate to the <b>Lightsail</b> console from <a href="https://console.aws.amazon.com/" target="_blank">AWS Management Console</a>.<br>
+    <picture><img width="500rem" src="./assets/aws-management-console.png"></picture><br><br>
+    
+Select <b>Create instance</b>.<br>
+    <picture><img width="500rem" src="./assets/create-instance.png"></picture><br><br>
+    
+Select <b>Change AWS Region and Availability Zone</b> to choose the most suitable for your location.<br>
     <picture><img width="400rem" src="./assets/instance-location.png"></picture><br><br>
-    Region <b>Singapore</b> is fastest location for Vietnam. You can choose any Availability Zone.<br><br>
+
+Region <b>Singapore</b> is fastest location for Vietnam. You can choose any Availability Zone.<br>
     <picture><img width="400rem" src="./assets/select-location.png"></picture><br><br>
-    </li>
-    <li>Select platform <b>Linux/Unix</b> and blueprint <b>WordPress (Apps + OS)</b>.<br><br>
-    <picture><img width="400rem" src="./assets/instance-image.png"></picture><br><br><br>
-    </li>
-    <li>Select <b>Price Plan</b> base on your need.<br><br>
-    <picture><img width="400rem" src="./assets/instance-plan.png"></picture><br><br><br>
-    </li>
-    <li>Before creating the instane, give the instance a name to identify it. Then select <b>Create instance</b>.<br><br>
-    <picture><img width="500rem" src="./assets/confirm-create.png"></picture><br><br><br>
-    </li>
-</ol>
-That's it!
-<br><br>
+    
+Select platform <b>Linux/Unix</b> and blueprint <b>WordPress (Apps + OS)</b>.<br>
+    <picture><img width="400rem" src="./assets/instance-image.png"></picture><br><br>
+    
+Select <b>Price Plan</b> base on your need.<br>
+    <picture><img width="400rem" src="./assets/instance-plan.png"></picture><br><br>
+    
+Before creating the instane, give the instance a name to identify it. Then select <b>Create instance</b>.<br>
+    <picture><img width="500rem" src="./assets/confirm-create.png"></picture><br><br>
+    
+<br>
 
 <h2>Config Static IP</h2>
 
-We need to wait for instance complete startup.<br>
-    <a><img width="200rem" src="./assets/instance-pending.png"></a><br>
-After 3-5 minutes, this instance will be running.<br>
-    <a><img width="200rem" src="./assets/instance-running.png"></a><br>
+We need to wait for instance complete startup.
+    <picture><img width="300rem" src="./assets/instance-pending.png"></picture><br>
+After 3-5 minutes, this instance will be running.
+    <picture><img width="300rem" src="./assets/instance-running.png"></picture><br>
+Open instance <b>Connect tab</b> by click to its name, you can see the IP of my instance (IPv4): <b>13.212.150.202</b>.<br>
+    <picture><img width="400rem" src="./assets/instance-connect.png"></picture><br>
+This IP could be change if we restart or shutdown the instance that why we need to assign a static IP for <b>Amazon Route 53</b> service. Select <b>Networking</b> tab.<br>
+    <picture><img width="400rem" src="./assets/instance-networking.png"></picture><br>
+Click <b>Attach static IP</b> under PUBLIC IP.<br>
+    <picture><img width="300rem" src="./assets/static-ip.png"></picture><br>
+Give the IP a name to identify, then select <b>Create and attach</b>.<br>
+    <picture><img width="300rem" src="./assets/static-ip-complete.png"></picture><br>
+Now my instance has a <b>new IP (static): 13.229.25.92</b> attach to it. Save this IP for step mapping domain in the next step.<br>
+    <picture><img width="400rem" src="./assets/new-static-ip.png"></picture><br>
+
+
+<h2>Register Domain in Amazon Route 53</h2>
+Navigate to the <b>Route 53</b> console from <a href="https://console.aws.amazon.com/" target="_blank">AWS Management Console</a>.<br>
+    <picture><img width="500rem" src="./assets/route53.png"></picture><br><br>
+Select <b>Registered domains</b> in the left side pannel.<br>
+    <picture><img width="500rem" src="./assets/route53-console.png"></picture><br><br>
+Choose <b>Register Domain</b> button to register new domain by Amazon Route 53. You can also choose <b>Transfer Domain</b> to use your domain that you already have in other registrars (NameCheap, Google Domain, GoDaddy, Bluehost...)<br>
+    <picture><img width="300rem" src="./assets/register-domain.png"></picture><br><br>
+Pick the domain, then <b>Add to cart</b>. Select duration (year) in the right side <b>Shopping cart</b>, click <b>Continue</b> to process next step.<br>
+    <picture><img width="200rem" src="./assets/shopping-cart.png"></picture><br><br>
+After complete fill in <b>Contact Details</b> and step <b>Verify & Purchase</b><br><br>
+    <picture><img width="500rem" src="./assets/domain-complete.png"></picture><br><br>
+AWS will send you an email to get your confirmation.<br>
+    <picture><img width="500rem" src="./assets/domain-verify.png"></picture><br><br>
+
+<h2>Mapping domain to IP address</h2>
+In the <b>Route 53</b> console, select <b>Hosted zones</b> in the left side pannel.<br>
+    <picture><img width="500rem" src="./assets/route53-hosted-zones.png"></picture><br><br>
+When your domain was registered sucessfully, you will see its hosted zone of this domain. Click to this name<br>
+    <picture><img width="400rem" src="./assets/hosted-zones-name.png"></picture><br><br>
+Click <b>Create record</b><br>
+    <picture><img width="400rem" src="./assets/click-create-record.png"></picture><br><br>
+Leave <b>Record name</b> box empty, <b>Record type</b> select <b>A - Routes traffic to an IPv4 address and some AWS resources</b>. Paste the static IPv4 from step <b>Config Static IP</b> <a target="_blank">13.229.25.92</a> to <b>Value</b> box.<br>
+    <picture><img width="400rem" src="./assets/create-record.png"></picture><br><br>
+Click <b>Add another record</b>, then fill in same as the previous record but type <b>www</b> in the <b>Record name</b> box. Then choose <b>Create records</b> button in the bottom.<br>
+    <picture><img width="400rem" src="./assets/create-another-record.png"></picture><br><br>
+
+Now you can open your wordpress website with the your domain!
 
 <p align="right"><a href="#start"><img width="45rem" src="./assets/top.png"></a></p>
