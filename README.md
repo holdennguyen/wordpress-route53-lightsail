@@ -10,13 +10,13 @@
 
 <br>
 <p align="center">
-<a href="#get-started">Hosting Wordpress in the Amazon Lightsail</a> | <a href="#usage">Usage</a> | <a href="#usage-examples">Usage Examples</a> | <a href="#how-does-it-work">How does it work?</a> | <a href="#features">Features</a> | <a href="#appendix-boptional-request--response-headers">Optional Headers</a> | <a href="#appendix-acommand-line-options">CLI</a> | <a href="Cheatsheet.md">Cheatsheet</a>
+<a href="#hosting">Hosting Wordpress in the Amazon Lightsail</a> | <a href="#usage">Usage</a> | <a href="#usage-examples">Usage Examples</a> | <a href="#how-does-it-work">How does it work?</a> | <a href="#features">Features</a> | <a href="#appendix-boptional-request--response-headers">Optional Headers</a> | <a href="#appendix-acommand-line-options">CLI</a> | <a href="Cheatsheet.md">Cheatsheet</a>
 </p>
 
-<h2>Hosting Wordpress in the Amazon Lightsail</h2>
+<h2 id="#hosting">Hosting Wordpress in the Amazon Lightsail</h2>
 
 <ol>
-    <li>Navigate to the <b>Lightsail</b> console from <a href="https://console.aws.amazon.com/">AWS Management Console</a>.<br><br>
+    <li>Navigate to the <b>Lightsail</b> console from <a href="https://console.aws.amazon.com/" target="_blank">AWS Management Console</a>.<br><br>
     <img src="./assets/aws-management-console.png"><br><br><br>
     </li>
     <li>Select <b>Create instance</b>.<br><br>
