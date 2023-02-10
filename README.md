@@ -71,7 +71,7 @@ Leave <b>Record name</b> box empty, <b>Record type</b> select <b>A - Routes traf
     <picture><img width="400rem" src="./assets/create-record.png"></picture><br><br>
 Click <b>Add another record</b>, then fill in same as the previous record but type <b>www</b> in the <b>Record name</b> box. Then choose <b>Create records</b> button in the bottom.<br>
     <picture><img width="400rem" src="./assets/create-another-record.png"></picture><br><br>
-Now you can open your wordpress website with the your domain!
+For more information, see <a href="https://aws.amazon.com/getting-started/hands-on/map-your-domain-at-route53-to-lightsail/3/">Map your domain at Amazon Route 53 to your Lightsail resources</a>.
 
 <h2>Setup free SSL Certificates (HTTPS)</h2>
 Open the <b>Lightsail</b> console, click the <b>terminal button</b> (in the right of instance name) in your <b>WordPress instance</b><br>
