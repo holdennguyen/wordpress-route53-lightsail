@@ -31,9 +31,9 @@ Before creating the instane, give the instance a name to identify it. Then selec
 <br>
 
 <h2>Config Static IP</h2>
-We need to wait for instance complete startup.
+We need to wait for instance complete startup.<br>
     <picture><img width="300rem" src="./assets/instance-pending.png"></picture><br>
-After 3-5 minutes, this instance will be running.
+After 3-5 minutes, this instance will be running.<br>
     <picture><img width="300rem" src="./assets/instance-running.png"></picture><br>
 Open instance <b>Connect tab</b> by click to its name, you can see the IP of my instance (IPv4): <b>13.212.150.202</b>.<br>
     <picture><img width="400rem" src="./assets/instance-connect.png"></picture><br>
@@ -79,9 +79,9 @@ Open the <b>Lightsail</b> console, click the <b>terminal button</b> (in the righ
 to open the <b>terminal window</b>.<br>
     <picture><img width="400rem" src="./assets/wordpress-terminal.png"></picture><br><br>
 In the terminal, run this command:<br>
-```httpx
+<code>
 sudo /opt/bitnami/bncert-tool
-```
+</code>
 <br>Type your domain to <b>Domain list [ ]:</b>, then input <b>y</b> (because we also create record for subdomain <b>www</b> in the previous step).<br>
 Continue input <b>y</b> for next question <b>Enable HTTP to HTTPS redirection [Y/n]:</b><br>
 For the next two question <b>from www</b> and <b>to www</b>, just input <b>y</b> for one.<br>
@@ -90,10 +90,10 @@ Input <b>y</b> for the rest and then we done.
 <h2>Login to WordPress page</h2>
 Open the <b>terminal window</b> of <b>WordPress instance</b>.<br>
     <picture><img width="400rem" src="./assets/wordpress-terminal.png"></picture><br><br>
-Run this command to get the password:
-```httpx
+Run this command to get the password: <br>
+<code>
 cat $HOME/bitnami_application_password
-```
+</code>
 <br>Your username is <b>user</b>. 
 <br>
 Read the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-quick-start-guide-wordpress" target="_blank">Quick start guide: WordPress on Amazon Lightsail</a> to see more information.
