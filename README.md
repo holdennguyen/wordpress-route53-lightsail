@@ -29,6 +29,7 @@ Select <b>Price Plan</b> base on your need.<br>
 Before creating the instane, give the instance a name to identify it. Then select <b>Create instance</b>.<br>
     <picture><img width="500rem" src="./assets/confirm-create.png"></picture><br><br>  
 <br>
+For more information, see <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tutorial-launching-and-configuring-wordpress" target="_blank">Tutorial: Launch and configure a WordPress instance in Amazon Lightsail</a>.
 
 <h2>Config Static IP</h2>
 We need to wait for instance complete startup.<br>
@@ -45,6 +46,7 @@ Give the IP a name to identify, then select <b>Create and attach</b>.<br>
     <picture><img width="300rem" src="./assets/static-ip-complete.png"></picture><br>
 Now my instance has a <b>new IP (static): 13.229.25.92</b> attach to it. Save this IP for step mapping domain in the next step.<br>
     <picture><img width="400rem" src="./assets/new-static-ip.png"></picture><br>
+For more information, see <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-create-static-ip">Create a static IP and attach it to an instance in Amazon Lightsail</a>.
 
 <h2>Register Domain in Amazon Route 53</h2>
 Navigate to the <b>Route 53</b> console from <a href="https://console.aws.amazon.com/" target="_blank">AWS Management Console</a>.<br>
@@ -59,6 +61,7 @@ After complete fill in <b>Contact Details</b> and step <b>Verify & Purchase</b><
     <picture><img width="500rem" src="./assets/domain-complete.png"></picture><br><br>
 AWS will send you an email to get your confirmation.<br>
     <picture><img width="500rem" src="./assets/domain-verify.png"></picture><br><br>
+For more information, see <a href="https://aws.amazon.com/getting-started/hands-on/get-a-domain/">How to Register a Domain Name with Amazon Route 53</a>.
 
 <h2>Mapping domain to IP address</h2>
 In the <b>Route 53</b> console, select <b>Hosted zones</b> in the left side pannel.<br>
