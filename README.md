@@ -81,8 +81,9 @@ to open the <b>terminal window</b>.<br>
 In the terminal, run this command: <code>sudo /opt/bitnami/bncert-tool</code><br>
 Type your domain to <b>Domain list [ ]:</b> then input <b>y</b> (because we also create record for subdomain <b>www</b> in the previous step).<br>
 Continue input <b>y</b> for next question <b>Enable HTTP to HTTPS redirection [Y/n]:</b><br>
-For the next two question <b>from www</b> and <b>to www</b>, just input <b>y</b> for one.<br>
-Input <b>y</b> for the rest and then we done.
+In the next two question <b>from www</b> and <b>to www</b>, just input <b>y</b> for one.<br>
+Input <b>y</b> for the rest and then we done.<br>
+For more information, see <a href="https://aws.amazon.com/premiumsupport/knowledge-center/linux-lightsail-ssl-bitnami/">Install SSL certificates on Bitnami stacks for Lightsail</a>.
 
 <h2>Login to WordPress page</h2>
 Open the <b>terminal window</b> of <b>WordPress instance</b>.<br>
@@ -90,6 +91,6 @@ Open the <b>terminal window</b> of <b>WordPress instance</b>.<br>
 Run this command to get the password:<code>cat $HOME/bitnami_application_password</code><br>
 Your username is <b>user</b>. 
 <br>
-Read the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-quick-start-guide-wordpress" target="_blank">Quick start guide: WordPress on Amazon Lightsail</a> to see more information.
+For more information, see <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-quick-start-guide-wordpress" target="_blank">Quick start guide: WordPress on Amazon Lightsail</a>.
 
 <p align="right"><a href="#start"><img width="45rem" src="./assets/top.png"></a></p>
