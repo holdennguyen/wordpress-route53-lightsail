@@ -42,9 +42,9 @@ That's it!
 
 <h2>Config Static IP</h2>
 
-We need to wait for instance complete startup.
+We need to wait for instance complete startup.<br>
     <a><img width="200rem" src="./assets/instance-pending.png"></a><br>
-After 3-5 minutes, this instance will be running.
+After 3-5 minutes, this instance will be running.<br>
     <a><img width="200rem" src="./assets/instance-running.png"></a><br>
 
 <p align="right"><a href="#start"><img width="45rem" src="./assets/top.png"></a></p>
