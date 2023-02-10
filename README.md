@@ -33,19 +33,19 @@ For more information, see <a href="https://lightsail.aws.amazon.com/ls/docs/en_u
 
 <h2>Config Static IP</h2>
 We need to wait for instance complete startup.<br>
-    <picture><img width="300rem" src="./assets/instance-pending.png"></picture><br>
+    <picture><img width="300rem" src="./assets/instance-pending.png"></picture><br><br>
 After 3-5 minutes, this instance will be running.<br>
-    <picture><img width="300rem" src="./assets/instance-running.png"></picture><br>
+    <picture><img width="300rem" src="./assets/instance-running.png"></picture><br><br>
 Open instance <b>Connect tab</b> by click to its name, you can see the IP of my instance (IPv4): <b>13.212.150.202</b>.<br>
-    <picture><img width="400rem" src="./assets/instance-connect.png"></picture><br>
+    <picture><img width="400rem" src="./assets/instance-connect.png"></picture><br><br>
 This IP could be change if we restart or shutdown the instance that why we need to assign a static IP for <b>Amazon Route 53</b> service. Select <b>Networking</b> tab.<br>
-    <picture><img width="400rem" src="./assets/instance-networking.png"></picture><br>
+    <picture><img width="400rem" src="./assets/instance-networking.png"></picture><br><br>
 Click <b>Attach static IP</b> under PUBLIC IP.<br>
-    <picture><img width="300rem" src="./assets/static-ip.png"></picture><br>
+    <picture><img width="300rem" src="./assets/static-ip.png"></picture><br><br>
 Give the IP a name to identify, then select <b>Create and attach</b>.<br>
-    <picture><img width="300rem" src="./assets/static-ip-complete.png"></picture><br>
+    <picture><img width="300rem" src="./assets/static-ip-complete.png"></picture><br><br>
 Now my instance has a <b>new IP (static): 13.229.25.92</b> attach to it. Save this IP for step mapping domain in the next step.<br>
-    <picture><img width="400rem" src="./assets/new-static-ip.png"></picture><br>
+    <picture><img width="400rem" src="./assets/new-static-ip.png"></picture><br><br>
 For more information, see <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-create-static-ip">Create a static IP and attach it to an instance in Amazon Lightsail</a>.
 
 <h2>Register Domain in Amazon Route 53</h2>
