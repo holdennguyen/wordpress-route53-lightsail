@@ -1,125 +1,52 @@
 <p id="start" align="center">
 <br>
-<a href="#start"><img height="130rem" src="https://raw.githubusercontent.com/xnbox/DeepfakeHTTP/main/img/logo.png"></a>
-<br><br>
-<a href="#start"><img width="250rem" src="https://raw.githubusercontent.com/xnbox/DeepfakeHTTP/main/img/logo_text.png"></a>
+<a href="#start"><img src="./assets/banner.png"></a>
 <h1></h1>
 </p>
 
-<a title="License MIT" href="https://github.com/xnbox/DeepfakeHTTP/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square"></a>
-<a title="Latest release" href="https://github.com/xnbox/DeepfakeHTTP/releases"><img src="https://img.shields.io/github/v/release/xnbox/DeepfakeHTTP?style=flat-square&color=28A745"></a>
-<a title="Powered by Tommy" href="https://github.com/xnbox/tommy"><img src="https://img.shields.io/badge/powered_by-Tommy-blueviolet?style=flat-square"></a>
+![Wordpress](https://img.shields.io/badge/-WordPress-21759B?logo=wordpress&logoColor=white)
+![AWS](https://img.shields.io/badge/-Amazon%20AWS-FF9900?logo=amazon-aws&logoColor=white)
+[![Stars](https://img.shields.io/github/stars/holdennguyen/wordpress-route53-lightsail?style=social)](https://github.com/holdennguyen/wordpress-route53-lightsail/stargazers)
+
 <br>
-<p id="banner" align="center">
-<br>
-<a href="#banner"><img width="98%" src="https://raw.githubusercontent.com/xnbox/DeepfakeHTTP/main/img/text.png" alt="YOUR 100% STATIC DYNAMIC BACKEND"></a>
-<table>
-<tr>
-<td>
-<a href="#banner"><img align="left" src="https://raw.githubusercontent.com/xnbox/DeepfakeHTTP/main/img/image1.png" width="190"></a>
-<h3>What are people using it for?</h3>
-<ul>
-    <li>Creating the product PoC or demo before even starting out with the backend</li>
-    <li>REST, GraphQL, and other APIs mocking and testing</li>
-    <li>Hiding critical enterprise infrastructure behind a simple static facade</li>
-    <li>Hacking and fine-tuning HTTP communications on both server and client sides</li>
-</ul>
-<img width="1000" height="0">
-</td>
-</tr>
-</table>
-</p>
 <p align="center">
-<a href="#get-started">Get started</a> | <a href="#usage">Usage</a> | <a href="#usage-examples">Usage Examples</a> | <a href="#how-does-it-work">How does it work?</a> | <a href="#features">Features</a> | <a href="#appendix-boptional-request--response-headers">Optional Headers</a> | <a href="#appendix-acommand-line-options">CLI</a> | <a href="Cheatsheet.md">Cheatsheet</a>
+<a href="#get-started">Hosting Wordpress in the Amazon Lightsail</a> | <a href="#usage">Usage</a> | <a href="#usage-examples">Usage Examples</a> | <a href="#how-does-it-work">How does it work?</a> | <a href="#features">Features</a> | <a href="#appendix-boptional-request--response-headers">Optional Headers</a> | <a href="#appendix-acommand-line-options">CLI</a> | <a href="Cheatsheet.md">Cheatsheet</a>
 </p>
 
-<h2>Get started</h2>
+<h2>Hosting Wordpress in the Amazon Lightsail</h2>
 
 <ol>
-    <li>Download the <a href="https://github.com/xnbox/DeepfakeHTTP/releases/latest">latest release</a> of <code>df.jar</code></li>
-    <li>Copy-paste the content of the dump example to the file <code>dump.txt</code>:
-<span></span>
-
-```httpx
-GET /api/customer/123 HTTP/1.1
-
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-    "id": 123,
-    "fname": "John",
-    "lname": "Doe",
-    "email": ["john@example.com", "johndoe@example.com"]
-}
-```
-
-</li>
-<li>Start the server from command line:
-
-```
-java -jar df.jar --dump dump.txt
-```
-</li>
-    <li>Use a browser to check whether the server is running:
-<br>
-<pre><a href="http://localhost:8080/api/customer/123">http://localhost:8080/api/customer/123</a></pre>
-</li>
-<li>Get response:<br>
-<a href="#get-started"><img src="https://raw.githubusercontent.com/xnbox/DeepfakeHTTP/main/img/get-started.png"></a>
-</li>
+    <li>Navigate to the <b>Lightsail</b> console from <a href="https://console.aws.amazon.com/">AWS Management Console</a>.<br><br>
+    <a href="#get-started"><img src="./assets/aws-management-console.png"></a><br><br><br>
+    </li>
+    <li>Select <b>Create instance</b>.<br><br>
+    <a><img src="./assets/create-instance.png"></a><br><br><br>
+    </li>
+    <li>Select <b>Change AWS Region and Availability Zone</b> to choose the most suitable for your location.<br>
+    <a><img src="./assets/instance-location.png"></a><br><br>
+    Region <b>Singapore</b> is fastest location for Vietnam. You can choose any Availability Zone.
+    <br><br><a><img src="./assets/select-location.png"></a><br><br>
+    </li>
+    <li>Select platform <b>Linux/Unix</b> and blueprint <b>WordPress (Apps + OS)</b>.
+    <br><br><a><img src="./assets/instance-image.png"></a><br><br><br>
+    </li>
+    <li>Select <b>Price Plan</b> base on your need.<br><br>
+    <a><img src="./assets/instance-plan.png"></a><br><br><br>
+    </li>
+    <li>Before creating the instane, give the instance a name to identify it. Then select <b>Create instance</b>.<br><br>
+    <a><img src="./assets/confirm-create.png"></a><br><br><br>
+    </li>
 </ol>
 That's it!
 <br><br>
-For more examples see the <a href="Cheatsheet.md">cheatsheet</a>.<br>
-Also take look at <a href="https://github.com/xnbox/DeepfakeHTTP/tree/main/PetClinic/README#readme">REST version of the Spring PetClinic built with DeepfakeHTTP</a>.
 
-<h2>Usage</h2>
+<h2>Config Static IP</h2>
 
-```
-java -jar df.jar [OPTIONS] [FLAGS] [COMMANDS]                                 
-                                                                              
-OPTIONS:                                                                       
-   --host <host>            host name, default: localhost                      
-   --port <number>          HTTP TCP port number, default: 8080                
-   --port-ssl <number>      HTTPS TCP port number, default: 8443               
-   --dump <file|url>...     dump text file(s)/URL(s)
-   --db <file|url>          json/yaml/csv memory file to populate templates    
-   --db-export <file>       export memory to json file                         
-   --db-path <path>         serve live memory file at specified context        
-   --dir <dir>              forward unmatched requests to specified directory            
-   --js <file|url>...       JavaScript file(s) for script engine context       
-   --openapi-path <path>    serve built-in OpenAPI client at specified context 
-   --openapi-title <text>   provide custom OpenAPI specification title         
-   --collect <file>         collect live request/response to file              
-   --format <json|yaml>     output format for --print-* commands, default: json
-   --status <number>        status code for non-matching requests, default: 404
-   --max-log-body <number>  max body bytes in console log, default: unlimited  
-                                                                               
-FLAGS:                                                                         
-   --no-log                 disable request/response console logging           
-   --no-log-request-info    disable request info in console logging            
-   --no-log-headers         disable request/response headers in console logging
-   --no-log-body            disable request/response body in console logging   
-   --no-cors                disable CORS headers                               
-   --no-etag                disable 'ETag' header                              
-   --no-server              disable 'Server' header                            
-   --no-watch               disable watch files for changes                    
-   --no-color               disable ANSI color output for --print-* commands   
-   --no-pretty              disable prettyprint for --print-* commands         
-   --no-template            disable template processing                        
-   --no-wildcard            disable wildcard processing                        
-   --no-bak                 disable backup old memory file before overwrite    
-   --strict-json            enable strict JSON comparison                      
-   --redirect               enable redirect HTTP to HTTPS                      
-   --db-export-on-exit      export memory only on server close event           
-                                                                               
-COMMANDS:                                                                      
-   --help                   print help message                                 
-   --print-info             print dump files statistics to stdout as json/yaml 
-   --print-requests         print dump requests to stdout as json/yaml         
-   --print-openapi          print OpenAPI specification to stdout as json/yaml
-```
+We need to wait for instance complete startup.
+    <a><img src="./assets/instance-pending.png"></a><br>
+After 3-5 minutes, this instance will be running.
+    <a><img src="./assets/instance-running.png"></a><br>
+
 
 <h2>Usage Examples</h2>
 Start server on dump file:
