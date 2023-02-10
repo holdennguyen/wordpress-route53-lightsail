@@ -10,36 +10,27 @@
 
 <br>
 <p align="center">
-<a href="#hosting-wordpress-in-the-amazon-lightsail">Hosting Wordpress in the Amazon Lightsail</a> | <a href="#config-static-ip">Config static IP</a> | <a href="#register-domain-in-amazon-route-53">Register Domain in Amazon Route 53</a> | <a href="#mapping-domain-to-ip-address">Mapping domain to IP address</a> | <a href="#features">Features</a> | <a href="#appendix-boptional-request--response-headers">Optional Headers</a> | <a href="#appendix-acommand-line-options">CLI</a> | <a href="Cheatsheet.md">Cheatsheet</a>
+<a href="#hosting-wordpress-in-the-amazon-lightsail">Hosting Wordpress in the Amazon Lightsail</a> | <a href="#config-static-ip">Config static IP</a> | <a href="#register-domain-in-amazon-route-53">Register Domain in Amazon Route 53</a> | <a href="#mapping-domain-to-ip-address">Mapping domain to IP address</a> | <a href="#setup-free-ssl-certificates-(https)">Setup free SSL Certificates (HTTPS)</a> | <a href="#login-to-wordpress-page">Login to WordPress page</a>
 </p>
 
 <h2>Hosting Wordpress in the Amazon Lightsail</h2>
-
 Navigate to the <b>Lightsail</b> console from <a href="https://console.aws.amazon.com/" target="_blank">AWS Management Console</a>.<br>
-    <picture><img width="500rem" src="./assets/aws-management-console.png"></picture><br><br>
-    
+    <picture><img width="500rem" src="./assets/aws-management-console.png"></picture><br><br>   
 Select <b>Create instance</b>.<br>
-    <picture><img width="500rem" src="./assets/create-instance.png"></picture><br><br>
-    
+    <picture><img width="500rem" src="./assets/create-instance.png"></picture><br><br>  
 Select <b>Change AWS Region and Availability Zone</b> to choose the most suitable for your location.<br>
     <picture><img width="400rem" src="./assets/instance-location.png"></picture><br><br>
-
 Region <b>Singapore</b> is fastest location for Vietnam. You can choose any Availability Zone.<br>
-    <picture><img width="400rem" src="./assets/select-location.png"></picture><br><br>
-    
+    <picture><img width="400rem" src="./assets/select-location.png"></picture><br><br>   
 Select platform <b>Linux/Unix</b> and blueprint <b>WordPress (Apps + OS)</b>.<br>
-    <picture><img width="400rem" src="./assets/instance-image.png"></picture><br><br>
-    
+    <picture><img width="400rem" src="./assets/instance-image.png"></picture><br><br>    
 Select <b>Price Plan</b> base on your need.<br>
-    <picture><img width="400rem" src="./assets/instance-plan.png"></picture><br><br>
-    
+    <picture><img width="400rem" src="./assets/instance-plan.png"></picture><br><br>    
 Before creating the instane, give the instance a name to identify it. Then select <b>Create instance</b>.<br>
-    <picture><img width="500rem" src="./assets/confirm-create.png"></picture><br><br>
-    
+    <picture><img width="500rem" src="./assets/confirm-create.png"></picture><br><br>  
 <br>
 
 <h2>Config Static IP</h2>
-
 We need to wait for instance complete startup.
     <picture><img width="300rem" src="./assets/instance-pending.png"></picture><br>
 After 3-5 minutes, this instance will be running.
@@ -54,7 +45,6 @@ Give the IP a name to identify, then select <b>Create and attach</b>.<br>
     <picture><img width="300rem" src="./assets/static-ip-complete.png"></picture><br>
 Now my instance has a <b>new IP (static): 13.229.25.92</b> attach to it. Save this IP for step mapping domain in the next step.<br>
     <picture><img width="400rem" src="./assets/new-static-ip.png"></picture><br>
-
 
 <h2>Register Domain in Amazon Route 53</h2>
 Navigate to the <b>Route 53</b> console from <a href="https://console.aws.amazon.com/" target="_blank">AWS Management Console</a>.<br>
@@ -81,7 +71,31 @@ Leave <b>Record name</b> box empty, <b>Record type</b> select <b>A - Routes traf
     <picture><img width="400rem" src="./assets/create-record.png"></picture><br><br>
 Click <b>Add another record</b>, then fill in same as the previous record but type <b>www</b> in the <b>Record name</b> box. Then choose <b>Create records</b> button in the bottom.<br>
     <picture><img width="400rem" src="./assets/create-another-record.png"></picture><br><br>
-
 Now you can open your wordpress website with the your domain!
+
+<h2>Setup free SSL Certificates (HTTPS)</h2>
+Open the <b>Lightsail</b> console, click the <b>terminal button</b> (in the right of instance name) in your <b>WordPress instance</b><br>
+    <picture><img width="300rem" src="./assets/instance-running.png"></picture><br><br>
+to open the <b>terminal window</b>.<br>
+    <picture><img width="400rem" src="./assets/wordpress-terminal.png"></picture><br><br>
+In the terminal, run this command:
+```httpx
+sudo /opt/bitnami/bncert-tool
+```
+Type your domain to <b>Domain list [ ]:</b>, then input <b>y</b> (because we also create record for subdomain <b>www</b> in the previous step).
+Continue input <b>y</b> for next question <b>Enable HTTP to HTTPS redirection [Y/n]:</b>
+For the next two question <b>from www</b> and <b>to www</b>, just input <b>y</b> for one.
+Input <b>y</b> for the rest and then we done.
+
+<h2>Login to WordPress page</h2>
+Open the <b>terminal window</b> of <b>WordPress instance</b>.<br>
+    <picture><img width="400rem" src="./assets/wordpress-terminal.png"></picture><br><br>
+Run this command to get the password:
+```httpx
+cat $HOME/bitnami_application_password
+```
+Your username is <b>user</b>. 
+
+Read the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-quick-start-guide-wordpress" target="_blank">Quick start guide: WordPress on Amazon Lightsail</a> to see more information.
 
 <p align="right"><a href="#start"><img width="45rem" src="./assets/top.png"></a></p>
