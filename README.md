@@ -17,24 +17,24 @@
 
 <ol>
     <li>Navigate to the <b>Lightsail</b> console from <a href="https://console.aws.amazon.com/" target="_blank">AWS Management Console</a>.<br><br>
-    <picture><img src="./assets/aws-management-console.png"></picture><br><br><br>
+    <picture><img width="500rem" src="./assets/aws-management-console.png"></picture><br><br><br>
     </li>
     <li>Select <b>Create instance</b>.<br><br>
-    <picture><img src="./assets/create-instance.png"></picture><br><br><br>
+    <picture><img width="500rem" src="./assets/create-instance.png"></picture><br><br><br>
     </li>
     <li>Select <b>Change AWS Region and Availability Zone</b> to choose the most suitable for your location.<br>
-    <picture><img src="./assets/instance-location.png"></picture><br><br>
+    <picture><img width="400rem" src="./assets/instance-location.png"></picture><br><br>
     Region <b>Singapore</b> is fastest location for Vietnam. You can choose any Availability Zone.<br><br>
-    <picture><img src="./assets/select-location.png"></picture><br><br>
+    <picture><img width="400rem" src="./assets/select-location.png"></picture><br><br>
     </li>
     <li>Select platform <b>Linux/Unix</b> and blueprint <b>WordPress (Apps + OS)</b>.<br><br>
-    <picture><img src="./assets/instance-image.png"></picture><br><br><br>
+    <picture><img width="400rem" src="./assets/instance-image.png"></picture><br><br><br>
     </li>
     <li>Select <b>Price Plan</b> base on your need.<br><br>
-    <picture><img src="./assets/instance-plan.png"></picture><br><br><br>
+    <picture><img width="400rem" src="./assets/instance-plan.png"></picture><br><br><br>
     </li>
     <li>Before creating the instane, give the instance a name to identify it. Then select <b>Create instance</b>.<br><br>
-    <picture><img src="./assets/confirm-create.png"></picture><br><br><br>
+    <picture><img width="500rem" src="./assets/confirm-create.png"></picture><br><br><br>
     </li>
 </ol>
 That's it!
@@ -43,8 +43,8 @@ That's it!
 <h2>Config Static IP</h2>
 
 We need to wait for instance complete startup.
-    <a><img src="./assets/instance-pending.png"></a><br>
+    <a><img width="200rem" src="./assets/instance-pending.png"></a><br>
 After 3-5 minutes, this instance will be running.
-    <a><img src="./assets/instance-running.png"></a><br>
+    <a><img width="200rem" src="./assets/instance-running.png"></a><br>
 
 <p align="right"><a href="#start"><img width="45rem" src="./assets/top.png"></a></p>
